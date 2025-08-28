@@ -1,0 +1,10 @@
+{
+  "name": "4dTunnels-Editor",
+  "references": [
+    "4dTunnels"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": []
+}
