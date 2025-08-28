@@ -249,10 +249,10 @@ public class FourDTunnels : MonoBehaviour
         if (_location.ToInt() == _targetNodes[_currentTarget])
         {
             // If so, go to next stage, or module solved if this was the last stage
-            Debug.LogFormat("[3d Tunnels #{0}] {1} identified correctly.", _moduleId, _symbolNames[_location.ToInt()]);
+            Debug.LogFormat("[4d Tunnels #{0}] {1} identified correctly.", _moduleId, _symbolNames[_location.ToInt()]);
             if (_currentTarget == _numTargetNodes - 1)
             {
-                Debug.LogFormat("[3d Tunnels #{0}] Module solved!", _moduleId);
+                Debug.LogFormat("[4d Tunnels #{0}] Module solved!", _moduleId);
                 _solved = true;
                 TargetSymbol.gameObject.SetActive(false);
                 Module.HandlePass();
@@ -277,7 +277,7 @@ public class FourDTunnels : MonoBehaviour
 
     private void LogActions()
     {
-        Debug.LogFormat("[3d Tunnels #{0}] You got a strike. Action log:", _moduleId);
+        Debug.LogFormat("[4d Tunnels #{0}] You got a strike. Action log:", _moduleId);
 
         for (var i = 0; i < _actionLog.Count; i++)
         {
@@ -302,7 +302,7 @@ public class FourDTunnels : MonoBehaviour
                 else
                     msg += "Moving forward to " + _symbolNames[action.EndLocation.ToInt()] + ". ";
             }
-            Debug.LogFormat("[3d Tunnels #{0}] {1}", _moduleId, msg);
+            Debug.LogFormat("[4d Tunnels #{0}] {1}", _moduleId, msg);
         }
         _actionLog.Clear();
     }
